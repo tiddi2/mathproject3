@@ -2,14 +2,48 @@
 <html>
     <head>
         <title>Common Birthday Calculator</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link href="c3-0.4.18/c3.css" rel="stylesheet">
     </head>
     <body>
-        <span>Number of people: </span>
-        <input type="number" value="10" min="1" max="365" id="input"/>
-        <span>Probablility: </span>
-        <input type="text" name="Probablility" disabled="true" id="output"/>
+        <div class="container">
+            <div id="header">
+                <!-- HEADER -->
+                <div class="page-header">
+                    <h1>Common Birthday Calculator</h1>
+                </div>
+            </div>
+            
+            <div id="controls">
+                <span>Number of people: </span>
+                <input type="number" value="10" min="1" max="365" id="input"/>
+                <span>Probablility: </span>
+                <input type="text" name="Probablility" disabled="true" id="output"/>
+            </div>
+            
+            <div id="chart"></div>
+            
+            <div id="info">
+                <div class="page-header" id="info-header" onclick="$('#description').toggle(250)">
+                    <h3>Info</h3>
+                </div>
+
+                <div id="description">
+                    <p>The way we calculate the probability fo N people is by first calculating that none of them share a birthday using the formula, (365/365)*(364/365)*...*(365-n-1/365).
+                        To understand this formula think of the amount of birthdays 1 person can have to no comflict with any others, that is all 365 out of 365, then if we add another person he only has 364 days to choose from, and the next has 363 and so on.
+                        then to calculate the probability of some of then share birthday we can just do 1 - (the probability none share birthday)</p>
+                    <p>To use this program just choose the number of people and se the number and graph update</p>
+                </div>
+            </div>
+            
+        </div>
         
         
+        
+        <script src="https://d3js.org/d3.v3.js" charset="utf-8"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="c3-0.4.18/c3.min.js"></script>
         <script src="main.js"></script>
     </body>
 </html>

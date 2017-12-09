@@ -1,0 +1,25 @@
+.pascalLine {
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+.pascal {
+    text-align: center;
+    line-height: normal;
+    display: inline-block;
+    width: 8%;
+    background-color: #4285F4;
+    border: 4px solid white;
+    border-radius: 7px;
+    padding: 0px;
+    margin: 0px;
+}
+
+#result {
+    font-size: 300%;
+}
+
+#current {
+    background-color: #00C851;
+}

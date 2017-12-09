@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Checking Quantified Statements for Truth </title>
+        <meta charset="UTF-8"> 
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="style.css" type="text/css" />
+    </head>
+    <body>
+        
+        <div class="container">
+            
+            <div id="header">
+                <!-- HEADER -->
+                <div class="page-header">
+                    <h1>Checking Quantified Statements for Truth</h1>
+                </div>
+            </div>
+            
+            <div id="content" class="row">
+                <div id="domain" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="inputAdd" placeholder="Element" value=""/>
+                        <div class="input-group-btn">
+                            <button id="btnAdd" class="btn btn-primary">Add</button>
+                        </div>
+                    </div>
+                    <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Domain</th>
+                          </tr>
+                        </thead>
+                        <tbody id="elements">
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div id="predicate" class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                    <div class="input-group">
+                        <input type="text" class="form-control" value="x > 5" id="predicateValue"/>
+                        <div class="input-group-btn">
+                            <button id="btnCheck" class="btn btn-primary">Check</button>
+                        </div>
+                    </div>
+                    <div class="radio">
+                      <label><input type="radio"  id="forALL" name="OptionPredicate" checked >∀xP(x)</label>
+                    </div>
+                    <div class="radio">
+                      <label><input type="radio" id="forSOME" name="OptionPredicate">∃xP(x)</label>
+                    </div>
+                    <div><p id="result" ></p></div>
+                    </div>
+                </div>
+            
+            
+                <div id="info">
+                    <div class="page-header" id="info-header" onclick="$('#description').toggle(250)">
+                        <h3>Info</h3>
+                    </div>
+    
+                    <div id="description">
+                            Using javascript we can create an element, each element will then contain a value set by the user. the element then gets put inside the table which contains all the values that has been inputted. By collecting only the numbers in the new cell within the table, we use the numbers within a statement using the eval(variable) function in javascript. eval allows for evaluvation of a string with inputs from the table.<br> Example s= x > 5; x = "table Value"; eval(s); eval will then return true or false this allows us to create if statements for the values in the table.  The if statements then decides the outcome of the statement given if the value in the table is true or false. with the radio button you are able to check for ∃xP or ∀xP. <br> <br> Instructions: <br> input a statement using x as its variable(example x > 5) then choose either ∃xP or ∀xP then you can add a value to the table and click "Check!" when ready  
+                        </p>
+                    </div>
+                </div>
+          
+        </div>
+        
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="main.js"></script>
+    </body>
+</html>
+

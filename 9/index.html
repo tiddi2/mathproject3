@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>The hat check problem</title>
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+        <link href="c3-0.4.18/c3.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="container">
+            <div id="header">
+                <!-- HEADER -->
+                <div class="page-header">
+                    <h1>The hat check problem</h1>
+                </div>
+            </div>
+            
+            
+            <div class="input-group">
+                <label for="numPeople" class="input-group-addon">Number of people: </label>
+                <input type="number" class="form-control input-lg" value="5" min="1" max="100" id="numPeople"/>
+            </div>
+            <div class="input-group">
+                <label for="numIterations" class="input-group-addon">Number of iterations: </label>
+                <input type="number" class="form-control input-lg" value="1000" min="1" max="5000" id="numIterations"/>
+            </div>
+            
+            <div id="chart"></div>
+            
+            <div id="info">
+                <div class="page-header" id="info-header" onclick="$('#description').toggle(250)">
+                    <h3>Info</h3>
+                </div>
+
+                <div id="description">
+                    <p>The way we solved this one was by making an array of numbers from 0 to N-1 and shuffling it (Using the <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle#The_modern_algorithm">Fisher-Yates shuffle algorithm</a>), and then increasing a counter everytime the number was the same as the index.
+                    Then we had an "counting" array that we increased the index of the counter, in the end we divided those numbers by the amount of iterations to get the probability </p>
+                    <p>To use this program, just choose the amount of people in your siulation, then choose how many iterations the program will calculate. You will then see in reltime the graph update, you can then hover over each bar in the graph to se detailed stats about that data point. </p>
+                </div>
+            </div>
+            
+        </div>
+        
+        
+        
+        <script src="https://d3js.org/d3.v3.js" charset="utf-8"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="c3-0.4.18/c3.min.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>
