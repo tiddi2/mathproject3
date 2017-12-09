@@ -12,7 +12,35 @@ function calculate(){
     let b = document.getElementById("numberB").value;
     let n = document.getElementById("numberN").value;
     markPascalRow(n);
-    document.getElementById("output").innerHTML = a + b + n;
+    
+    let result = "";
+    let first = true;
+    
+    for(let x in pascal[n]){
+        result += (first?"":" + ") + pascal[n][x].innerHTML + "*" + myPow(a,parseInt(n)- x) + "*" + myPow(b,x);
+        first = false;
+    }
+    let hasChar = /[a-zA-z]/;
+    if(!hasChar.test(result)){
+        result += " = " + eval(result);
+    }
+    document.getElementById("output").innerHTML = result;
+}
+
+
+
+function myPow(base, pow){
+    if(pow == 1){
+        return base;
+    }
+    if(pow == 0){
+        return 1;
+    }
+    let isString = /\D/;
+    if(isString.test(base)){
+        return base + "^" + pow;
+    }
+    return Math.pow(base,pow);
 }
 
 function markPascalRow(row){

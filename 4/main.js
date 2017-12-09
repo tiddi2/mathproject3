@@ -1,37 +1,23 @@
-var start = parseInt(document.getElementById("start").value);
-var stop = parseInt(document.getElementById("stop").value);
-var product = parseInt(document.getElementById("product").value);
-document.getElementById("submit").onclick = calculateWithInput;
-console.log()
+$(".form-control").keyup(calculateWithInput);
+var p = document.getElementById("result")
 function calculateWithInput(argument) {
-    console.log(calculateP(start,stop,product));
-}
-function calculateP(start, stop, p) {
-    console.log(product);
-    for(var x = 1; x < product; x++) {
-        var product = 1;
-        for(var i = start; i <= stop; i+= x) {
-              product *= i; 
+    var start = parseInt(document.getElementById("start").value);
+    var stop = parseInt(document.getElementById("stop").value);
+    var sum = parseInt(document.getElementById("sum").value);
+    var diff = calculateS(start,stop,sum);
+    if(!isNaN(diff) && diff > 0) {
+        p.innerHTML = "Sequence: "
+        for(var i = start; i <= stop; i+= diff) {
+            p.innerHTML += i;
+            if(i != stop) {
+                p.innerHTML += ", ";
+            }
         }
-        console.log("sum: " + p)
-        if(product == p) {
-            return i;
-        }
+        p.innerHTML += "<br/> Difference: " + diff;
     }
-    return -1;
 }
-
 function calculateS(start, stop, s) {
-    console.log(product);
-    for(var x = 1; x < product; x++) {
-        var s = 0;
-        for(var i = start; i <= stop; i+= x) {
-              s += i; 
-        }
-        console.log("sum: " + s)
-        if(s == product) {
-            return i;
-        }
-    }
-    return -1;
+    var steps = s*2/ (start+stop);
+    var diff = (stop-start)/(steps-1)
+    return diff;
 }

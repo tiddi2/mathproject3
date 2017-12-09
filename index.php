@@ -18,17 +18,6 @@
             </div>
             
             <div id="oppgaver" class="row fix">
-    
-                <!-- OPPGAVE -->
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <a class="thumbnail" href="1/">
-                        <img src="picture">
-                        <div class="caption">
-                            <h3>Automated Theorem Proving</h3>
-                            <p>Write a program that will prove that two inputted propo-sitions are logically equivalent.</p>
-                        </div>
-                    </a>
-                </div>
                 
                 <!-- OPPGAVE -->
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
@@ -78,21 +67,28 @@
                 <!-- OPPGAVE -->
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                     <a class="thumbnail" href="6/">
-                        <img src="picture">
+                        <img src="6/image.png">
                         <div class="caption">
                             <h3>Binomial Theorem</h3>
-                            <p>Description</p>
-                        </div>
-                    </a>
-                </div>
-                
-                <!-- OPPGAVE -->
-                <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-                    <a class="thumbnail" href="7/">
-                        <img src="picture">
-                        <div class="caption">
-                            <h3>Minimum Spanning tree generator</h3>
-                            <p>Description</p>
+                            <p>Write a program that calculates the value of (
+a
++
+b
+)^
+n
+.  The user should
+be able to input
+a, b
+and
+n
+where
+n
+must be positive integer.  For
+a
+and
+b
+, the user can pick
+numbers as well as variables.  Both must work!</p>
                         </div>
                     </a>
                 </div>
