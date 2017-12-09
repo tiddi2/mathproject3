@@ -44,10 +44,10 @@
                 <!-- OPPGAVE -->
                 <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
                     <a class="thumbnail" href="4/">
-                        <img src="picture">
+                        <img src="4/image.png">
                         <div class="caption">
                             <h3>Mathematical Induction and Sequences</h3>
-                            <p>Description</p>
+                            <p>Write a program that calculates sequences by entering the sum of an mathematical term as well as the starting and stopping value. </p>
                         </div>
                     </a>
                 </div>
